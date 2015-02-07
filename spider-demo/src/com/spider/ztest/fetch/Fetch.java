@@ -4,7 +4,6 @@ import java.io.InputStream;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.methods.GetMethod;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 
 public abstract class Fetch implements Runnable{
@@ -18,7 +17,7 @@ public abstract class Fetch implements Runnable{
  
     public String getHost() {
         return host;
-    }
+    } 
  
     public void setHost(String host) {
         this.host = host;

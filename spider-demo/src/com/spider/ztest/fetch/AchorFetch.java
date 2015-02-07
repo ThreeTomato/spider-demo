@@ -28,11 +28,9 @@ public class AchorFetch extends Fetch {
                 href = a.attr("href");
                 href = this.getHost()
                         + (href.startsWith("/") ? href : "/" + href);
-            }
-            if (href != null && !"".equals(href)) {
                 String line = "[线程：" + this.getRoot().getUrl() + "][总深度:"
-                        + this.getDepth() + "][当前深度:"
-                        + this.getRoot().getDepth() + "][URL:" + href + "]";
+                		+ this.getDepth() + "][当前深度:"
+                		+ this.getRoot().getDepth() + "][URL:" + href + "]";
                 U u = new U(this.getRoot().getDepth() + 1, href);
                 System.out.println(line);
                 new Thread(new AchorFetch(u, this.getDepth())).start();

@@ -1,5 +1,7 @@
 package com.spider.entity;
 
+import com.spider.util.InvokeJsonUtil;
+
 /**
  * 
  * @typename Site
@@ -14,6 +16,18 @@ public class Site {
 	private String domain;
 	private String startUrl;
 	private int linkFilterType;
+	
+	public static void main(String[] args) {
+
+		Site site = new Site();
+		site.setId(1);
+		site.setName("99114");
+		site.setDomain("99114.com");
+		site.setStartUrl("99114.com");
+		site.setLinkFilterType(1);
+		System.err.println(InvokeJsonUtil.toJson(site));
+		
+	}
 	
 	public int getId() {
 		return id;

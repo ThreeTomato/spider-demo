@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 
 public class InvokeJsonUtil {
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static String toJson(Object obj){
 
 		Class clazz = obj.getClass();

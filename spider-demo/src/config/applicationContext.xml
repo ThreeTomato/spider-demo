@@ -58,6 +58,15 @@
 			<tx:method name="*" />
 		</tx:attributes>
 	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut expression="execution(* com.spider.service.impl.SayOk.*(..))" id="sayOkk"/>
+		<aop:aspect id="dd" ref="logWriter">
+			<aop:before method="log" pointcut-ref="sayOkk" />
+			<aop:after method="logArg" pointcut-ref="sayOkk"/>
+			<aop:after-returning method="logArgAndReturn" returning="returnObj" pointcut-ref="sayOkk"/>
+		</aop:aspect>
+	</aop:config>
     
 </beans>
     

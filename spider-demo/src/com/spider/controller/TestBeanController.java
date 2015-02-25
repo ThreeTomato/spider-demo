@@ -24,6 +24,8 @@ public class TestBeanController implements ApplicationContextAware{
 	public void getBean(){
 		SayOk ok = (SayOk) applicationContext.getBean("sayOk");
 		ok.say();
+		System.out.println("--------------");
+		ok.action();
 	}
 	
 }

@@ -60,7 +60,7 @@
 	</tx:advice>
 	
 	<aop:config>
-		<aop:pointcut expression="execution(* com.spider.service.impl.SayOk.*(..))" id="sayOkk"/>
+		<aop:pointcut expression="execution(* com.spider.service.impl.SayOk.say*(..) )" id="sayOkk"/>
 		<aop:aspect id="dd" ref="logWriter">
 			<aop:before method="log" pointcut-ref="sayOkk" />
 			<aop:after method="logArg" pointcut-ref="sayOkk"/>

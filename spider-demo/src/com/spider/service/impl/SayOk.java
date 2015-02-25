@@ -9,4 +9,7 @@ public class SayOk {
 		System.err.println("ok");
 	}
 	
+	public void action(){
+		System.err.println("action");
+	}
 }
